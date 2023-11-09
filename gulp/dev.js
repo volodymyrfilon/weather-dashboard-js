@@ -99,7 +99,7 @@ gulp.task('js:dev', function () {
 		.pipe(changed('./build/js/'))
 		.pipe(plumber(plumberNotify('JS')))
 		// .pipe(babel())
-		.pipe(webpack(require('./../webpack.config.js')))
+		.pipe(webpack(require('../webpack.config.js')))
 		.pipe(gulp.dest('./build/js/'));
 });
 
