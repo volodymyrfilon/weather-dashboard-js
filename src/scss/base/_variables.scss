@@ -1,4 +1,17 @@
 /*========= Variables =========*/
+* {
+    margin: 0 auto;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: linear-gradient(113deg, #FFF 0.28%, rgba(70, 97, 115, 0.00) 178.65%);
+}
+
+
 .container {
     width: 1345px;
 }
