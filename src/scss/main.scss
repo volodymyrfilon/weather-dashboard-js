@@ -1,5 +1,6 @@
-/* Base */
-@import "./base/*.scss";
+/*========= Base =========*/
+@import "./base/normalize.scss";
+@import "./base/variables.scss";
 
-/* Blocks */
-@import "./blocks/*.scss";
+/*========= Blocks =========*/
+@import "./blocks/header/header.scss"; 

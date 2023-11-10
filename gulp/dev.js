@@ -33,7 +33,7 @@ const plumberNotify = (title) => {
 		errorHandler: notify.onError({
 			title: title,
 			message: 'Error <%= error.message %>',
-			sound: false,
+			sound: true,
 		}),
 	};
 };
