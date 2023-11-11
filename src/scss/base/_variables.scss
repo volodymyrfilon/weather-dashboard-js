@@ -8,7 +8,11 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: linear-gradient(113deg, #FFF 0.28%, rgba(70, 97, 115, 0.00) 178.65%);
+    background: linear-gradient(113deg, rgba(255,255,255,1) 1%, rgba(70,97,115,1) 180%);
+}
+
+body.dark {
+    background: linear-gradient(113deg, rgba(116,116,116,1) 0%, rgba(42,42,42,1) 120%);
 }
 
 
