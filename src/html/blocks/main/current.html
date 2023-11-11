@@ -1,78 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
-	<body>
-		<header class="header">
-    <div class="container">
-        <div class="header__wrapper">
-
-            <div class="header__darkmode">
-                <input type="checkbox" class="header__darkmode-check" id="darkmode-check">
-                <label class="header__darkmode-label" for="darkmode-check">
-                    <i class="header__darkmode-icon"></i>
-                    <i class="header__darkmode-icon"></i>
-                    <div class="header__darkmode-ball"></div>
-                </label>
-                <div class="header__darkmode-text">Light Mode</div>
-            </div>
-
-
-            <div class="header__search">
-                <span class="header__search-span">
-                    <svg width="46px" height="46px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.9151 18.9104C18.7129 16.8713 20.9494 11.3289 18.9104 6.53105C16.8713 1.73319 11.3289 -0.503279 6.53103 1.53577C1.73317 3.57481 -0.503299 9.11722 1.53575 13.9151C3.57479 18.713 9.1172 20.9494 13.9151 18.9104Z"
-                            stroke="#71717A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M16.8972 16.897L24.2181 24.2189" stroke="#71717A" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </span>
-                <input type="text" placeholder="Search for your preffered city.." class="header__search-input">
-            </div>
-
-
-            <div class="header__location">
-                <div class="header__location-icon">
-                    <svg height="36px" width="36px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
-                        <style type="text/css">
-                            .st0 {
-                                fill: #000000;
-                            }
-                        </style>
-                        <g>
-                            <path class="st0" d="M463.515,236.436c-4.627-49.732-26.735-94.499-60.104-127.839c-33.341-33.369-78.115-55.484-127.846-60.112V0
-                                h-39.129v48.485c-49.717,4.627-94.491,26.742-127.831,60.112c-33.37,33.34-55.477,78.108-60.12,127.839H0v39.129h48.484
-                                c4.643,49.732,26.75,94.498,60.12,127.838c33.34,33.362,78.114,55.477,127.831,60.112V512h39.129v-48.484
-                                c49.731-4.636,94.505-26.75,127.846-60.112c33.369-33.34,55.477-78.107,60.104-127.838H512v-39.129H463.515z M422.953,275.565
-                                c-4.47,38.62-21.964,73.172-48.069,99.312c-26.148,26.112-60.692,43.592-99.32,48.07v-69.339h-39.129v69.332
-                                c-38.613-4.47-73.172-21.95-99.305-48.062c-26.119-26.14-43.599-60.692-48.069-99.312h69.332v-39.129H89.061
-                                c4.47-38.621,21.95-73.172,48.069-99.313c26.134-26.112,60.692-43.599,99.305-48.069v69.339h39.129V89.054
-                                c38.627,4.47,73.171,21.957,99.32,48.069c26.105,26.141,43.599,60.692,48.069,99.313h-69.346v39.129H422.953z" />
-                                                    <path class="st0" d="M256.007,233.993C243.843,233.993,234,243.85,234,256c0,12.15,9.843,22.007,22.008,22.007
-                                c12.15,0,22.007-9.858,22.007-22.007C278.014,243.85,268.157,233.993,256.007,233.993z" />
-                        </g>
-                    </svg>
-                </div>
-                <div class="header__location-text">Current location</div>
-            </div>
-        </div>
-
-    </div>
-</header>
-		<main class="weather">
-			<div class="weather__city">
-    <div class="weather__city-name">Kyiv</div>
-    <div class="weather__city-time">09:01</div>
-    <div class="weather__city-date">Tuesday, 05 Aug</div>
-</div>
-			<div class="weather__current">
+<div class="weather__current">
 
     <div class="weather__current-first">
         <div class="weather__current-temperature">24°C</div>
@@ -170,8 +96,3 @@
 
     <div class="weather__current-third"></div>
 </div>
-
-		</main>
-		<script src="./js/index.bundle.js"></script>
-	</body>
-</html>

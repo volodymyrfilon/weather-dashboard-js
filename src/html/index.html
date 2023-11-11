@@ -8,8 +8,12 @@
 		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
-		@@include('blocks/header.html')
-		<!-- @@include('blocks/footer.html') -->
+		@@include('blocks/header/header.html')
+		<main class="weather">
+			@@include('blocks/main/city.html')
+			@@include('blocks/main/current.html')
+
+		</main>
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>
