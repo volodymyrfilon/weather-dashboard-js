@@ -1,0 +1,1 @@
+!function(){const e=document.querySelector(".header__darkmode-check"),t=document.querySelector(".header__darkmode-text");e.addEventListener("change",(()=>{document.body.classList.toggle("dark"),document.body.classList.contains("dark")?t.textContent="Dark Mode":t.textContent="Light Mode"}))}();

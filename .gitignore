@@ -6,8 +6,8 @@ package-lock.json
 /coverage
 
 #? production
-# /build
-/docs
+/build
+# /docs
 
 #? misc
 .DS_Store
