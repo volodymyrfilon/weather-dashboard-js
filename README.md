@@ -2,7 +2,7 @@
 
 ### Preview
 
-<p align="center" font="1px">
+<p align="center" >
     <div>Light format:</div>
     <img src="./docs/img/assets/weather-light.png" width="350" title="weather-light preview">
 </p>

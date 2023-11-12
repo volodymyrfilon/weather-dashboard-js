@@ -10,4 +10,3 @@ darkModeCheck.addEventListener('change', () => {
         darkModeText.textContent = "Light Mode";
     }
 })
-

@@ -1,5 +1,8 @@
 .weather{
+    margin-top: 50px;
     display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap */
 }
 
 .weather__city {
@@ -30,8 +33,9 @@
 }
 
 .weather__current {
-    padding: 16px 24px;
+    padding: 40px 24px;
     display: flex;
+
     width: 780px;
     height: 330px;
     border-radius: 30px;
@@ -96,8 +100,45 @@
     &-second {
         width: 270px;
     }
+    &-icon {
+        width: 202px;
+        height: 202px;
+    }
+    &-weather {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+    }
+
 
     &-third {
         width: 238px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-humidity,
+    &-wind,
+    &-pressure,
+    &-uv {
+        display: flex;
+        flex-direction: column;
+        width: 110px;
+        height: 132px;
+
+    }
+    &-humidity_value,
+    &-wind_value,
+    &-pressure_value,
+    &-uv_value {
+        margin-top: 8px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &-humidity_text,
+    &-wind_text,
+    &-pressure_text,
+    &-uv_text {
+        font-size: 16px;
+        font-weight: 500;
     }
 }
