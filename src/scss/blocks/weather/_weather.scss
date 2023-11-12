@@ -116,30 +116,21 @@
         display: flex;
         flex-wrap: wrap;
     }
-    &-humidity,
-    &-wind,
-    &-pressure,
-    &-uv {
+    &-other {
         display: flex;
         flex-direction: column;
         width: 110px;
         height: 132px;
 
-    }
-    &-humidity_value,
-    &-wind_value,
-    &-pressure_value,
-    &-uv_value {
-        margin-top: 8px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-    &-humidity_text,
-    &-wind_text,
-    &-pressure_text,
-    &-uv_text {
-        font-size: 16px;
-        font-weight: 500;
+        &_value {
+            margin-top: 8px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &_text {
+            font-size: 16px;
+            font-weight: 500;
+        }
     }
 }
 

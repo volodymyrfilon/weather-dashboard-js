@@ -66,6 +66,13 @@
             border: 1px solid #292929;
             border-radius: 40px 0 0 40px;  
             border-right: none;
+
+            & svg:hover {
+                transform: scale(1.1);
+            }
+            & svg:active {
+                transform: scale(1);
+            }
         }
         &-input {
             width: 100%;
