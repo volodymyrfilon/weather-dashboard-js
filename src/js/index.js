@@ -43,17 +43,14 @@ const getAllWeatherData = async(data, _API_KEY) => {
         await errorBoundary(error.message, "Try Again");
       }
     }
-  }
-
-
-
+}
 
 //* =============== GET & FORMAT CITY===============
 function search() {
     const city = searchCityInput.value.trim();
     getAllWeatherData(city, _API_KEY);
     console.log(city);
-  }
+}
 
 //* ============= SEARCH WEATHER BUTTON EVENTLISTENERS =============
 searchCityButton.addEventListener('click', search);
@@ -63,9 +60,7 @@ searchCityInput.addEventListener('keyup', (e) => {
     }
   })
 
-
 //* ================= GET USER LOCATION =================
-
 getUserLocationButton.addEventListener("click", getUserLocation);
 // getAllWeatherData(getUserLocation(), _API_KEY);
 
