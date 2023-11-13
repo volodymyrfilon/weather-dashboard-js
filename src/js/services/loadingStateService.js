@@ -1,7 +1,7 @@
-import { dynamicData } from '../modules/constants'
+import { dynamicData, searchCityInput } from '../modules/constants'
 
 export const setLoadingState = async () => {
-  // seachCityInput.blur();
+  searchCityInput.blur();
 
   for (let index = 0; index < dynamicData.length; index++) {
     dynamicData[index].classList.add("loading");
@@ -11,6 +11,6 @@ export const setLoadingState = async () => {
 export const unsetLoadingState = async () => {
   for (let index = 0; index < dynamicData.length; index++) {
     dynamicData[index].classList.remove("loading");
-    // console.log(index);
+    console.log(index);
   }
 }

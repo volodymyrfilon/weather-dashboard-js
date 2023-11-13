@@ -23,7 +23,7 @@
             position: absolute;
             opacity: 0;
             &:checked + .header__darkmode-label .header__darkmode-ball {
-                transform: translateX(48px);
+                transform: translateX(46px);
             }
         }
         &-label {

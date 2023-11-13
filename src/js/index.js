@@ -7,32 +7,18 @@ import {
 import fetchCurrentWeatherData from './modules/fetchCurrentWeatherData'
 import getUserLocation from './modules/getUserLocation'
 import { errorBoundary } from './services/errorBoundaryService'
-// import { setLoadingState, unsetLoadingState } from './services/loadingStateService'
+import { setLoadingState, unsetLoadingState } from './services/loadingStateService'
 
 
-
-
-const darkModeCheck = document.querySelector(".header__darkmode-check");
-const darkModeText = document.querySelector('.header__darkmode-text');
-
-darkModeCheck.addEventListener('change', () => {
-    document.body.classList.toggle('dark');
-    
-    if (document.body.classList.contains('dark')) {
-        darkModeText.textContent = "Dark Mode";
-    } else {
-        darkModeText.textContent = "Light Mode";
-    }
-})
-
-
-
+//* ================= GET USER LOCATION =================
+getUserLocationButton.addEventListener("click", getUserLocation);
+getUserLocation();
 //* =============== HANLDE OF ALL WEATHER FETCHTES ===============
 export const getAllWeatherData = async(data, _API_KEY) => {
     try {
-    //   await setLoadingState();
+      await setLoadingState();
       await fetchCurrentWeatherData(data, _API_KEY);
-    //   await unsetLoadingState();
+      await unsetLoadingState();
     } catch (error) {
       if (error.message === "Failed to fetch") {
         await errorBoundary(
@@ -45,10 +31,6 @@ export const getAllWeatherData = async(data, _API_KEY) => {
     }
 }
 export default getAllWeatherData;
-
-
-
-
 
 
 //* =============== GET & FORMAT CITY===============
@@ -66,9 +48,24 @@ searchCityInput.addEventListener('keyup', (e) => {
     }
   })
 
-//* ================= GET USER LOCATION =================
-getUserLocationButton.addEventListener("click", getUserLocation);
-// getAllWeatherData(getUserLocation(), _API_KEY);
+
+
+  
+const darkModeCheck = document.querySelector(".header__darkmode-check");
+const darkModeText = document.querySelector('.header__darkmode-text');
+
+darkModeCheck.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+    
+    if (document.body.classList.contains('dark')) {
+        darkModeText.textContent = "Dark Mode";
+    } else {
+        darkModeText.textContent = "Light Mode";
+    }
+})
+
+
+
 
 
 
