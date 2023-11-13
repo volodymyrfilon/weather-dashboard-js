@@ -26,16 +26,18 @@ export const formatDate = async (unixTimestamp, type) => {
   const minutes = date.getMinutes().toString().padStart(2, "0");
 
   const formattedDate = `${dayOfMonth} ${monthsOfYear[monthIndex]} ${daysOfWeek[dayOfWeekIndex]}`;
-  const formattedDateShortened = `${dayOfMonth} ${monthsOfYearShortened[monthIndex]} ${daysOfWeekShortened[dayOfWeekIndex]}`;
+  const formattedDateShortened = `${daysOfWeek[dayOfWeekIndex]}, ${dayOfMonth} ${monthsOfYearShortened[monthIndex]}`;
+  // const formattedDateShortened = `${dayOfMonth} ${monthsOfYearShortened[monthIndex]} ${daysOfWeekShortened[dayOfWeekIndex]}`;
 
-  if (type === "day") {
-    return daysOfWeek[dayOfWeekIndex];
-  } else if (type === "hour") {
-    return `${hours}:${minutes}`;
-  } else if (type === "short") {
-    return formattedDateShortened;
-  } else {
-    return formattedDate;
+  switch (type) {
+    case "day":
+      return daysOfWeek[dayOfWeekIndex];
+    case "hour":
+      return `${hours}:${minutes}`;
+    case "short":
+      return formattedDateShortened;
+    default:
+      return formattedDate;
   }
 }
 
@@ -48,11 +50,25 @@ export const metersToKm = async (meters) => {
 }
 
 export const roundDegree = async (degree) => {
-  if ((Math.round(degree * 10) / 10) % 1 === 0) {
-    return `${(Math.round(degree * 10) / 10).toFixed(1)}°C`;
-  } else {
-    return `${Math.round(degree * 10) / 10}°C`;
+  const formatDegree = (degree) => {
+    if (degree < 10 && degree >= 0) {
+      return `0${degree}°C`
+    } else if (degree > -10 && degree < 0) {
+      return `${degree}°C`
+    } else {
+      return `${degree}°C`
+    }
   }
+  
+  return formatDegree(Math.round(degree));
+  // let result;
+  // if ((Math.round(degree * 10) / 10) % 1 === 0) {
+  //   result = (Math.round(degree * 10) / 10).toFixed(1);
+  //   return formatDegree(result);
+  // } else {
+  //   result = Math.round(degree * 10) / 10;
+  //   return formatDegree(result);
+  // }
 }
 
 export const weatherIcons = {

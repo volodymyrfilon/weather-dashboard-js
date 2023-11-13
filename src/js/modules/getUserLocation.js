@@ -1,16 +1,19 @@
-const getUserLocation = async () => {
+import getAllWeatherData from '..'
+import { _API_KEY } from './constants'
+
+export const getUserLocation = async () => {
 	const successCallback = async (position) => {
 			const userLocation = {
 			lat: position.coords.latitude,
 			lon: position.coords.longitude
 			}
 			console.log(userLocation);
-			// await fetchFullWeatherData(GPSData, API_KEY);
+			await getAllWeatherData(userLocation, _API_KEY);
 	}
 
 	const errorCallback = (error) => {
 			console.log(error);
-			// fetchFullWeatherData("Kyiv", API_KEY);
+			getAllWeatherData("Kyiv", _API_KEY);
 	}
 	navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 }

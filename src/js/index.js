@@ -1,8 +1,8 @@
 import {
-    _API_KEY,
-    getUserLocationButton,
-    searchCityButton,
-    searchCityInput
+  _API_KEY,
+  getUserLocationButton,
+  searchCityButton,
+  searchCityInput
 } from './modules/constants'
 import fetchCurrentWeatherData from './modules/fetchCurrentWeatherData'
 import getUserLocation from './modules/getUserLocation'
@@ -28,7 +28,7 @@ darkModeCheck.addEventListener('change', () => {
 
 
 //* =============== HANLDE OF ALL WEATHER FETCHTES ===============
-const getAllWeatherData = async(data, _API_KEY) => {
+export const getAllWeatherData = async(data, _API_KEY) => {
     try {
     //   await setLoadingState();
       await fetchCurrentWeatherData(data, _API_KEY);
@@ -44,6 +44,12 @@ const getAllWeatherData = async(data, _API_KEY) => {
       }
     }
 }
+export default getAllWeatherData;
+
+
+
+
+
 
 //* =============== GET & FORMAT CITY===============
 function search() {

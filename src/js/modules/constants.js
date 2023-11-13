@@ -14,5 +14,5 @@ export const _API_KEY = 'e732a92c66574d856b927e390c09674e',
 	currentHumidity = document.querySelector('#currHumidity'),
 	currentWind = document.querySelector('#currWind'),
 	currentPressure = document.querySelector('#currPressure'),
-	currentUv = document.querySelector('#currUv'),
+	currentVisibility = document.querySelector('#currVisibility'),
 	dynamicData = document.querySelectorAll(".dynamic-data");
