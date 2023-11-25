@@ -9,17 +9,13 @@ import { fetchForecastWeatherData } from './modules/fetchForecastWeatherData'
 import getUserLocation from './modules/getUserLocation'
 import { createDailyCards } from './services/createForecastCardsService'
 import { errorBoundary } from './services/errorBoundaryService'
-import {
-	setLoadingState,
-	unsetLoadingState,
-} from './services/loadingStateService'
+import { setLoadingState, unsetLoadingState } from './services/loadingStateService'
 
 //* ================= GET USER LOCATION =================
 getUserLocationButton.addEventListener('click', getUserLocation)
 getUserLocation()
 //* =============== HANLDE OF ALL WEATHER FETCHTES ===============
 createDailyCards()
-
 export const getAllWeatherData = async (data, _API_KEY) => {
 	try {
 		await setLoadingState()
@@ -37,7 +33,7 @@ export const getAllWeatherData = async (data, _API_KEY) => {
 		}
 	}
 }
-export default getAllWeatherData
+export default getAllWeatherData;
 
 //* =============== GET & FORMAT CITY===============
 function search() {

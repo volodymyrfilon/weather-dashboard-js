@@ -28,9 +28,7 @@ export const currentVisibility = currentWeatherSection.querySelector('#currVisib
 
 //* WEATHER DAILY SECTION
 export const dailyWeatherSection = document.querySelector('.weather__days');
-export const dailyIcon = document.querySelector('.weather__days-icon');
-export const dailyTemp = document.querySelector('.weather__days-temperature');
-export const dailyDate = document.querySelector('.weather__days-date');
+
 
 //* WEATHER HOURLY SECTION
 // export const hourlyWeatherSection = document.querySelector('');

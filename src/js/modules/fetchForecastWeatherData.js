@@ -1,6 +1,11 @@
-import { dailyDate, dailyIcon, dailyTemp } from './constants'
+import { formatDate, roundDegree, weatherIcons } from '../services/convertUnitsService'
+import { dailyWeatherSection } from './constants'
 
 export const fetchForecastWeatherData = async (data, key) => {
+  const dailyIcon = dailyWeatherSection.querySelectorAll('.weather__days-icon');
+  const dailyTemp = dailyWeatherSection.querySelectorAll('.weather__days-temperature');
+  const dailyDate = dailyWeatherSection.querySelectorAll('.weather__days-date');
+
 	let API_URL;
 	if (data.lat && data.lon) {
     API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&appid=${key}&units=metric`;
@@ -19,53 +24,23 @@ export const fetchForecastWeatherData = async (data, key) => {
     }
   }
 	const fetchForecastWeatherData = await response.json();
-  // await filterForecastWeatherData(fetchForecastWeatherData);
-
-	for (let index = 0; index < 5; index++) {
-		dailyIcon[index].innerHTML = await formatDate(fetchForecastWeatherData.list[index].weather[0]);
-		dailyTemp[index].innerHTML = await roundDegree(fetchForecastWeatherData.list[index].main.temp);
-		dailyDate[index].innerHTML = await formatDate(fetchForecastWeatherData.list[index].dt, 'short');
+  const findDailyItems = (data) => {
+    let dailyItems = [];
+    for (let i = 0; i <40; i++) {
+      if (data.list[i].dt_txt.match('12:00:00')) {
+        dailyItems.push(fetchForecastWeatherData.list[i]);
+      }
+    }
+    return dailyItems;
+  }
+  const dailyData = findDailyItems(fetchForecastWeatherData)
+  
+	for (let i = 0; i < 5; i++) {
+		dailyIcon[i].src = `icons/weather/weather/${weatherIcons[dailyData[i].weather[0].icon]}.png`;
+		dailyTemp[i].textContent = await roundDegree(dailyData[i].main.temp);
+		dailyDate[i].textContent = await formatDate(dailyData[i].dt, 'short');
   }
 }
-
-// export const fetchForecastWeatherData = async (data, key) => {
-//   const hourlyForecastWeatherDate = document.querySelectorAll("#hourDate");
-//   const hourlyForecastWeatherTime = document.querySelectorAll("#hourTime");
-//   const hourlyForecastWeatherTemp = document.querySelectorAll("#hourTemp");
-
-//   const dailyForecastWeatherDate = document.querySelectorAll(".weather__forecast-date");
-//   const dailyForecastWeatherTime = document.querySelectorAll(".weather__forecast-time");
-//   const dailyForecastWeatherIcon = document.querySelectorAll(".weather__forecast-icon");
-//   const dailyForecastWeatherTemp = document.querySelectorAll(".weather__forecast-temp");
-//   const dailyForecastWeatherDescr = document.querySelectorAll(".weather__forecast-descr");
-
-//   let API_URL;
-
-//   if (data.lat && data.lon) {
-//     API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&appid=${key}&units=metric`;
-//   } else {
-//     API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${data}&appid=${key}&units=metric`;
-//   }
-
-//   const response = await fetch(API_URL);
-//   if (!response.ok) {
-//     if (response.status === 404) {
-//       throw new Error(`Sorry, we couldn't find ${data}. Please double-check the spelling and try again.`);
-//     } else {
-//       throw new Error(
-//         "Oops! We're having trouble getting the latest weather information right now. Please try again later or contact support if the problem persists."
-//       );
-//     }
-//   }
-
-//   const fetchForecastWeatherData = await response.json();
-//   await filterForecastWeatherData(fetchForecastWeatherData);
-
-//   for (let index = 0; index < 5; index++) {
-//     hourlyForecastWeatherDate[index].innerHTML = await formatDate(fetchForecastWeatherData.list[index].dt, "day");
-//     hourlyForecastWeatherTime[index].innerHTML = await formatDate(fetchForecastWeatherData.list[index].dt, "hour");
-//     hourlyForecastWeatherTemp[index].innerHTML = await roundDegree(fetchForecastWeatherData.list[index].main.temp);
-//   }
 
 //   for (let index = 0; index < 40; index++) {
 //     dailyForecastWeatherDate[index].innerHTML = await formatDate(fetchForecastWeatherData.list[index].dt, "short");

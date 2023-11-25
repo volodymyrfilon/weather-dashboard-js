@@ -11,6 +11,5 @@ export const setLoadingState = async () => {
 export const unsetLoadingState = async () => {
   for (let index = 0; index < dynamicData.length; index++) {
     dynamicData[index].classList.remove("loading");
-    console.log(index);
   }
 }

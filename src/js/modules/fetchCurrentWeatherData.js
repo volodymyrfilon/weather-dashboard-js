@@ -3,8 +3,10 @@ import {
 	metersToKm,
 	mpsToKmh,
 	roundDegree,
+	weatherIcons,
 } from '../services/convertUnitsService'
 import {
+	currentDate,
 	currentHumidity,
 	currentIcon,
 	currentPressure,
@@ -12,7 +14,6 @@ import {
 	currentTempFeels,
 	currentVisibility,
 	currentWeather,
-	currentDate,
 	currentWind,
 	sunriseTime,
 	sunsetTime,
@@ -47,20 +48,19 @@ export const fetchCurrentWeatherData = async (data, key) => {
 		{ icon, description } = fetchCurrentWeatherData.weather[0],
 		{ sunrise, sunset } = fetchCurrentWeatherData.sys
 
-	weatherCity.textContent = name
-	currentDate.textContent = await formatDate(dt, 'short')
-	currentTemp.textContent = await roundDegree(temp)
-	currentTempFeels.textContent = await roundDegree(feels_like)
-	sunriseTime.textContent = `${await formatDate(sunrise, 'hour')} AM`
-	sunsetTime.textContent = `${await formatDate(sunset, 'hour')} PM`
-	// currWeatherIco.src = `icons/weather/weather-ico/${weatherIcons[icon]}.png`;
-	currentIcon.src = icon
+	weatherCity.textContent = name;
+	currentDate.textContent = await formatDate(dt, 'short');
+	currentTemp.textContent = await roundDegree(temp);
+	currentTempFeels.textContent = await roundDegree(feels_like);
+	sunriseTime.textContent = `${await formatDate(sunrise, 'hour')} AM`;
+	sunsetTime.textContent = `${await formatDate(sunset, 'hour')} PM`;
+	currentIcon.src = `icons/weather/weather/${weatherIcons[icon]}.png`;
 	currentWeather.textContent = description
 
-	currentHumidity.textContent = `${humidity} %`
-	currentWind.textContent = await mpsToKmh(speed)
-	currentPressure.textContent = `${pressure} hPa`
-	currentVisibility.textContent = await metersToKm(visibility)
+	currentHumidity.textContent = `${humidity} %`;
+	currentWind.textContent = await mpsToKmh(speed);
+	currentPressure.textContent = `${pressure} hPa`;
+	currentVisibility.textContent = await metersToKm(visibility);
 }
 
 export default fetchCurrentWeatherData
