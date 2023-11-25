@@ -1,22 +1,30 @@
 /*========= Variables =========*/
 * {
-    margin: 0 auto;
-    font-family: Poppins, sans-serif;
-    transition: all .3s;
+	margin: 0 auto;
+	font-family: Poppins, sans-serif;
+	transition: all 0.3s;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(113deg, rgba(255,255,255,1) -30%, rgba(70,97,115,1) 150%);
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: linear-gradient(
+		113deg,
+		rgba(255, 255, 255, 1) -30%,
+		rgba(70, 97, 115, 1) 150%
+	);
+	user-select: none;
 }
 
 body.dark {
-    background: linear-gradient(113deg, rgba(116,116,116,1) 0%, rgba(42,42,42,1) 120%);
+	background: linear-gradient(
+		113deg,
+		rgba(116, 116, 116, 1) 0%,
+		rgba(42, 42, 42, 1) 120%
+	);
 }
 
-
 .container {
-    width: 1345px;
+	width: 1345px;
 }
