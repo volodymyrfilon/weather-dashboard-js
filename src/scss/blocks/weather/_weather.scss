@@ -188,7 +188,55 @@
 }
 
 .weather__hours {
-	padding: 5rem;
-	font-size: 2rem;
-	font-weight: bold;
+	padding: 18px 8px;
+	font-weight: 700;
+
+	&-title {
+		text-align: center;
+		font-size: 32px;
+	}
+
+	&-wrapper{
+		margin-top: 8px;
+		display: flex;
+		/* gap: ; */
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-item {
+		width: 130px;
+		height: 270px;
+		padding: 1rem;
+		border-radius: 40px;
+		background: linear-gradient(171deg, #F88508 -12.41%, rgba(246, 250, 217, 0.00) 163.32%);
+		/* background: linear-gradient(174deg, #443D64 -15.92%, rgba(101, 130, 198, 0.00) 192.45%); */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&-time {
+		font-size: 22px;
+	}
+	&-icon_weather {
+		margin: 0 auto;
+		width: 80px;
+		height: 80px;
+	}
+	&-temperature {
+		margin-top: 6px;
+		font-size: 20px;
+	}
+	&-icon_wind {
+		padding: 10px;
+		width: 56px;
+		height: 56px;
+	}
+	&-wind {
+		font-size: 20px;
+	}
 }
+
+

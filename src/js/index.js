@@ -7,15 +7,25 @@ import {
 import fetchCurrentWeatherData from './modules/fetchCurrentWeatherData'
 import { fetchForecastWeatherData } from './modules/fetchForecastWeatherData'
 import getUserLocation from './modules/getUserLocation'
-import { createDailyCards } from './services/createForecastCardsService'
+import { createDailyCards, createHourlyCards } from './services/createForecastCardsService'
 import { errorBoundary } from './services/errorBoundaryService'
 import { setLoadingState, unsetLoadingState } from './services/loadingStateService'
 
 //* ================= GET USER LOCATION =================
 getUserLocationButton.addEventListener('click', getUserLocation)
 getUserLocation()
+
+//* =============== GET & FORMAT CITY===============
+function search() {
+	const city = searchCityInput.value.trim()
+	getAllWeatherData(city, _API_KEY)
+	console.log(city)
+}
+
 //* =============== HANLDE OF ALL WEATHER FETCHTES ===============
 createDailyCards()
+createHourlyCards()
+
 export const getAllWeatherData = async (data, _API_KEY) => {
 	try {
 		await setLoadingState()
@@ -35,13 +45,6 @@ export const getAllWeatherData = async (data, _API_KEY) => {
 }
 export default getAllWeatherData;
 
-//* =============== GET & FORMAT CITY===============
-function search() {
-	const city = searchCityInput.value.trim()
-	getAllWeatherData(city, _API_KEY)
-	console.log(city)
-}
-
 //* ============= SEARCH WEATHER BUTTON EVENTLISTENERS =============
 searchCityButton.addEventListener('click', search)
 searchCityInput.addEventListener('keyup', e => {
@@ -50,6 +53,7 @@ searchCityInput.addEventListener('keyup', e => {
 	}
 })
 
+//* =============== DARKMODE ===============
 const darkModeCheck = document.querySelector('.header__darkmode-check')
 const darkModeText = document.querySelector('.header__darkmode-text')
 

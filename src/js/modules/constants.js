@@ -26,9 +26,6 @@ export const currentWind = currentWeatherSection.querySelector('#currWind')
 export const currentPressure = currentWeatherSection.querySelector('#currPressure')
 export const currentVisibility = currentWeatherSection.querySelector('#currVisibility')
 
-//* WEATHER DAILY SECTION
+//* WEATHER DAILY AND HOURLY SECTION
 export const dailyWeatherSection = document.querySelector('.weather__days');
-
-
-//* WEATHER HOURLY SECTION
-// export const hourlyWeatherSection = document.querySelector('');
+export const hourlyWeatherSection = document.querySelector('.weather__hours');
