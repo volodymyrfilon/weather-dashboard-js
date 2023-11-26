@@ -54,7 +54,7 @@ export const fetchCurrentWeatherData = async (data, key) => {
 	currentTempFeels.textContent = await roundDegree(feels_like);
 	sunriseTime.textContent = `${await formatDate(sunrise, 'hour')} AM`;
 	sunsetTime.textContent = `${await formatDate(sunset, 'hour')} PM`;
-	currentIcon.src = `icons/weather/weather/${weatherIcons[icon]}.png`;
+	currentIcon.src = `./icons/weather/weather/${weatherIcons[icon]}.png`;
 	currentWeather.textContent = description
 
 	currentHumidity.textContent = `${humidity} %`;

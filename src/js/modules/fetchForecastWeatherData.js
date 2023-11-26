@@ -46,7 +46,7 @@ export const fetchForecastWeatherData = async (data, key) => {
   const dailyData = findDailyItems(fetchForecastWeatherData)
   
 	for (let i = 0; i < 5; i++) {
-		dailyIcon[i].src = `icons/weather/weather/${weatherIcons[dailyData[i].weather[0].icon]}.png`;
+		dailyIcon[i].src = `./icons/weather/weather/${weatherIcons[dailyData[i].weather[0].icon]}.png`;
 		dailyTemp[i].textContent = await roundDegree(dailyData[i].main.temp);
 		dailyDate[i].textContent = await formatDate(dailyData[i].dt, 'short');
   }
@@ -65,9 +65,9 @@ export const fetchForecastWeatherData = async (data, key) => {
 
   for (let i = 0; i < 6; i++) {
     hourlyTime[i].textContent = await formatDate(fetchForecastWeatherData.list[i].dt, "hour");
-    hourlyIconWeather[i].src = `/icons/weather/weather/${weatherIcons[fetchForecastWeatherData.list[i].weather[0].icon]}.png`;
+    hourlyIconWeather[i].src = `./icons/weather/weather/${weatherIcons[fetchForecastWeatherData.list[i].weather[0].icon]}.png`;
     hourlyTemp[i].textContent = await roundDegree(fetchForecastWeatherData.list[i].main.temp);
-    hourlyIconWind[i].src = `/icons/weather/wind-vector.svg`;
+    hourlyIconWind[i].src = `./icons/weather/wind-vector.svg`;
     rotateWindIcon(hourlyIconWind[i], fetchForecastWeatherData.list[i].wind.deg);
     hourlyWind[i].textContent = await mpsToKmh(fetchForecastWeatherData.list[i].wind.speed);
 
