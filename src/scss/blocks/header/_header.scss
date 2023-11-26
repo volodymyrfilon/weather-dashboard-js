@@ -1,7 +1,6 @@
 .header {
     display: block;
     margin-top: 62px;
-
     &__wrapper {
         display: flex;
         align-items: center; 
@@ -12,10 +11,8 @@
         font-size: 20px;
         font-weight: 500;
     }
-    
     &__darkmode {
         width: 110px;
-    
         font-size: 18px;
         font-weight: 800;
         text-align: center;

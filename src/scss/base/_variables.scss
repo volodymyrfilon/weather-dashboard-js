@@ -2,29 +2,56 @@
 * {
 	margin: 0 auto;
 	font-family: Poppins, sans-serif;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 body {
+	color: var(--primary);
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-	background: linear-gradient(
-		113deg,
-		rgba(255, 255, 255, 1) -30%,
-		rgba(70, 97, 115, 1) 150%
-	);
+	background: var(--bgBody);
 	user-select: none;
-}
-
-body.dark {
-	background: linear-gradient(
-		113deg,
-		rgba(116, 116, 116, 1) 0%,
-		rgba(42, 42, 42, 1) 120%
-	);
 }
 
 .container {
 	width: 1345px;
+}
+
+
+$light-primary: #292929;
+$light-bgBody: linear-gradient(113deg, rgba(255, 255, 255, 1) -30%, rgba(70, 97, 115, 1) 150%);
+$light-bgCard: #d9d9d9;
+
+$dark-primary: #fff;
+$dark-bgBody: linear-gradient(113deg, rgba(116, 116, 116, 1) 0%, rgba(42, 42, 42, 1) 120%);
+$dark-bgCard: #444;
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #{$light-primary};
+    --bgBody: #{$light-bgBody};
+    --bgCard: #{$light-bgCard};
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #{$dark-primary};
+    --bgBody: #{$dark-bgBody};
+    --bgCard: #{$dark-bgCard};
+  }
+}
+
+body {
+  --primary: #{$light-primary};
+	--bgBody: #{$light-bgBody};
+	--bgCard: #{$light-bgCard};
+}
+
+body.dark {
+  --primary: #{$dark-primary};
+	--bgBody: #{$dark-bgBody};
+	--bgCard: #{$dark-bgCard};
 }

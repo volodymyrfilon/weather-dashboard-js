@@ -62,15 +62,22 @@ searchCityInput.addEventListener('keyup', e => {
 })
 
 //DARKMODE
-const darkModeCheck = document.querySelector('.header__darkmode-check')
-const darkModeText = document.querySelector('.header__darkmode-text')
+const darkModeCheck = document.querySelector('.header__darkmode-check');
+const darkModeText = document.querySelector('.header__darkmode-text');
 
+// Load and set dark mode state from localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const isDarkMode = localStorage.getItem('isDarkMode') === 'true';
+
+  document.body.classList.toggle('dark', isDarkMode);
+  darkModeText.textContent = isDarkMode ? 'Dark Mode' : 'Light Mode';
+  darkModeCheck.checked = isDarkMode;
+});
+
+// Toggle dark mode and save state to localStorage on change
 darkModeCheck.addEventListener('change', () => {
-	document.body.classList.toggle('dark')
+  const isDarkMode = document.body.classList.toggle('dark');
 
-	if (document.body.classList.contains('dark')) {
-		darkModeText.textContent = 'Dark Mode'
-	} else {
-		darkModeText.textContent = 'Light Mode'
-	}
-})
+  darkModeText.textContent = isDarkMode ? 'Dark Mode' : 'Light Mode';
+  localStorage.setItem('isDarkMode', isDarkMode.toString());
+});
