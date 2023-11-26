@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Стартовый шаблон</title>
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/icons/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/icons/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/icons/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/icons/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/icons/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/icons/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/icons/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/icons/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/icons/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/icons/favicon/manifest.json">
+
+	<!-- Basic Meta Tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Experience accurate and up-to-date weather information with Your Weather App. Check current conditions, forecasts, and more, all in one place. Plan your day with confidence.">
+
+	<!-- Title -->
+	<title>Weather App</title>
+
+	<!-- Open Graph Meta Tags (for social media sharing) -->
+	<meta property="og:title" content="Your Weather App Title">
+	<meta property="og:description" content="Experience accurate and up-to-date weather information with Your Weather App. Check current conditions, forecasts, and more, all in one place. Plan your day with confidence.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://volodymyrfilon.github.io/weather-dashboard-js/">
+	<meta property="og:image" content="../icons/meta/meta.jpg">
+	<meta property="og:image:alt" content="Your Weather App">
+
+	<!-- Twitter Meta Tags (for Twitter sharing) -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Your Weather App Title">
+	<meta name="twitter:description" content="Experience accurate and up-to-date weather information with Your Weather App. Check current conditions, forecasts, and more, all in one place. Plan your day with confidence.">
+	<meta name="twitter:image" content="../icons/meta/meta.jpg">
+	<meta name="twitter:creator" content="@YourTwitterHandle">
+
+	<!-- CSS Stylesheets, if any -->
 	<link rel="stylesheet" href="./css/main.css" />
+
+	<!-- Other Meta Tags -->
+	<meta name="keywords" content="weather, forecast, temperature, conditions, meteorology">
+	<meta name="author" content="Your Name">
+	<meta name="robots" content="index, follow">
+	<meta name="theme-color" content="">
 </head>
 
 <body>
@@ -73,7 +114,7 @@
 			<div class="weather__city">
     <div class="weather__city-wrapper dynamic-data">
         <div class="weather__city-name"></div>
-        <div class="weather__city-time">09:01</div>
+        <div class="weather__city-time">00:00</div>
         <div class="weather__city-date"></div>
     </div>
 </div>
@@ -172,20 +213,7 @@
     </div>
 
     <div class="weather__current-second dynamic-data">
-        <div class='weather__current-icon'>
-            <svg width="202px" height="202px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet" fill="#000000">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path fill="#FFAC33"
-                        d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z">
-                    </path>
-                    <circle fill="#FFAC33" cx="18" cy="18" r="10"></circle>
-                </g>
-            </svg>
-        </div>
+        <img src='' alt='' class='weather__current-icon'></img>
         <div class='weather__current-weather'>Sunny</div>
     </div>
 
@@ -325,39 +353,12 @@
 </div>
 			<div class="weather__days">
 	<div class='weather__days-title'>5 Days Forecast:</div>
-	<div class='weather__days-item dynamic-data'>
-		<!-- <div class='weather__days-icon'></div> -->
-		<img src='./icons/weather/weather/d-scattered-clouds.png' alt='icon' value='0' class='weather__days-icon' />
-		<div class='weather__days-temperature' value='0'>20°C</div>
-		<div class='weather__days-date' value='0'>Friday, 1 Sep</div>
-	</div>
-	<div class='weather__days-item dynamic-data'>
-		<!-- <div class='weather__days-icon'></div> -->
-		<img src='./icons/weather/weather/d-scattered-clouds.png' alt='icon' value='1' class='weather__days-icon' />
-		<div class='weather__days-temperature' value='1'>18°C</div>
-		<div class='weather__days-date' value='1'>Saturday, 2 Sep</div>
-	</div>
-	<div class='weather__days-item dynamic-data'>
-		<!-- <div class='weather__days-icon'></div> -->
-		<img src='./icons/weather/weather/d-scattered-clouds.png' alt='icon' value='2' class='weather__days-icon' />
-		<div class='weather__days-temperature' value='2'>40°C</div>
-		<div class='weather__days-date' value='2'>Sunday, 3 Sep</div>
-	</div>
-	<div class='weather__days-item dynamic-data'>
-		<!-- <div class='weather__days-icon'></div> -->
-		<img src='./icons/weather/weather/d-scattered-clouds.png' alt='icon' value='3' class='weather__days-icon' />
-		<div class='weather__days-temperature' value='3'>-1°C</div>
-		<div class='weather__days-date' value='3'>Wednesday, 30 Sep</div>
-	</div>
-	<div class='weather__days-item dynamic-data'>
-		<!-- <div class='weather__days-icon'></div> -->
-		<img src='./icons/weather/weather/d-scattered-clouds.png' alt='icon' value='4' class='weather__days-icon' />
-		<div class='weather__days-temperature' value='4'>-10°C</div>
-		<div class='weather__days-date' value='4'>Tuesday, 5 Sep</div>
-	</div>
+	<div class='weather__days-wrapper dynamic-data'></div>
 </div>
 			<div class="weather__hours">
-	<div class="weather__hours-wrapper dynamic-data">HOURLY FORECAST</div>
+	<div class="weather__hours-title">Hourly Forecast:</div>
+	<div class="weather__hours-wrapper dynamic-data">
+	</div>
 </div>
 	</div>
 
