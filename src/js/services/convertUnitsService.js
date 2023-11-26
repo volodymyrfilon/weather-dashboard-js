@@ -46,6 +46,10 @@ export const formatDate = async (unixTimestamp, type) => {
 	const hours = date.getHours().toString().padStart(2, '0')
 	const minutes = date.getMinutes().toString().padStart(2, '0')
 
+	const currentDate = new Date(); 
+	const currentHours = currentDate.getHours().toString().padStart(2, '0');
+	const currentMinutes = currentDate.getMinutes().toString().padStart(2, '0');
+
 	const formattedDate = `${dayOfMonth} ${monthsOfYear[monthIndex]} ${daysOfWeek[dayOfWeekIndex]}`
 	const formattedDateShortened = `${daysOfWeek[dayOfWeekIndex]}, ${dayOfMonth} ${monthsOfYearShortened[monthIndex]}`
 	// const formattedDateShortened = `${dayOfMonth} ${monthsOfYearShortened[monthIndex]} ${daysOfWeekShortened[dayOfWeekIndex]}`;
@@ -57,6 +61,8 @@ export const formatDate = async (unixTimestamp, type) => {
 			return `${hours}:${minutes}`
 		case 'short':
 			return formattedDateShortened
+		case 'currentTime':
+			return `${currentHours}:${currentMinutes}`
 		default:
 			return formattedDate
 	}

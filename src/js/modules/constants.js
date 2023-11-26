@@ -10,7 +10,7 @@ export const getUserLocationButton = document.querySelector('.header__location')
 //* WEATHER CITY SECTION
 export const cityWeatherSection = document.querySelector('.weather__city')
 export const weatherCity = cityWeatherSection.querySelector(	'.weather__city-name')
-export const currentTime = cityWeatherSection.querySelector('weather__city-time')
+export const currentTime = cityWeatherSection.querySelector('.weather__city-time')
 export const currentDate = cityWeatherSection.querySelector(	'.weather__city-date')
 
 //* WEATHER CURRENT SECTION

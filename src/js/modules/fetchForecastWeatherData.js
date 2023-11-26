@@ -6,6 +6,7 @@ export const fetchForecastWeatherData = async (data, key) => {
   const dailyTemp = dailyWeatherSection.querySelectorAll('.weather__days-temperature');
   const dailyDate = dailyWeatherSection.querySelectorAll('.weather__days-date');
 
+  const hourlyItems = document.querySelectorAll('.weather__hours-item');
   const hourlyTime = hourlyWeatherSection.querySelectorAll('.weather__hours-time');
   const hourlyIconWeather = hourlyWeatherSection.querySelectorAll('.weather__hours-icon_weather');
   const hourlyTemp = hourlyWeatherSection.querySelectorAll('.weather__hours-temperature');
@@ -31,6 +32,8 @@ export const fetchForecastWeatherData = async (data, key) => {
   }
 	const fetchForecastWeatherData = await response.json();
   
+
+  //* DAILY WEATHER DATA HANDLING !
   const findDailyItems = (data) => {
     let dailyItems = [];
     for (let i = 0; i <40; i++) {
@@ -48,8 +51,16 @@ export const fetchForecastWeatherData = async (data, key) => {
 		dailyDate[i].textContent = await formatDate(dailyData[i].dt, 'short');
   }
 
+  //* HOURLY WEATHER DATA HANDLING!
   const rotateWindIcon = (selector, deg) => {
     selector.style.transform = `rotate(${deg - 45}deg)`;
+  }
+
+  const handleItemBackground = (selector, time) => {
+    const dayTimes = ['06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
+    if (!dayTimes.includes(time)) {
+     selector.style.background = 'linear-gradient(174deg, #443D64 -15.92%, rgba(101, 130, 198, 0.00) 192.45%)'; 
+    }
   }
 
   for (let i = 0; i < 6; i++) {
@@ -59,5 +70,7 @@ export const fetchForecastWeatherData = async (data, key) => {
     hourlyIconWind[i].src = `/icons/weather/wind-vector.svg`;
     rotateWindIcon(hourlyIconWind[i], fetchForecastWeatherData.list[i].wind.deg);
     hourlyWind[i].textContent = await mpsToKmh(fetchForecastWeatherData.list[i].wind.speed);
+
+    handleItemBackground(hourlyItems[i], hourlyTime[i].textContent)
   }
 }
