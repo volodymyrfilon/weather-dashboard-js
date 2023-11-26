@@ -3,7 +3,6 @@ import {
 	metersToKm,
 	mpsToKmh,
 	roundDegree,
-	weatherIcons,
 } from '../services/convertUnitsService'
 import {
 	currentDate,
@@ -18,6 +17,7 @@ import {
 	sunriseTime,
 	sunsetTime,
 	weatherCity,
+	weatherIcons,
 } from './constants'
 
 export const fetchCurrentWeatherData = async (data, key) => {
