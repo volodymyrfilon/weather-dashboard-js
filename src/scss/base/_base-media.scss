@@ -9,6 +9,9 @@
 	}
 }
 @media screen and (max-width: 992px) {
+	body {
+		overflow: visible;
+	}
 	.container {
 		width: 768px
 	}

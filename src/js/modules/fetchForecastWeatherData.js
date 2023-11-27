@@ -49,7 +49,7 @@ export const fetchForecastWeatherData = async (data, key) => {
     const windowWidth = window.innerWidth;
     switch (type) {
       case 'dailyDate':
-        if (windowWidth >= 577 && windowWidth <= 922) {
+        if (windowWidth >= 577 && windowWidth <= 992) {
           return await formatDate(item, 'shortest');
         } else {
           return await formatDate(item, 'short');
