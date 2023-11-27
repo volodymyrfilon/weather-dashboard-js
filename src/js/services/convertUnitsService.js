@@ -52,7 +52,7 @@ export const formatDate = async (unixTimestamp, type) => {
 
 	const formattedDate = `${dayOfMonth} ${monthsOfYear[monthIndex]} ${daysOfWeek[dayOfWeekIndex]}`
 	const formattedDateShortened = `${daysOfWeek[dayOfWeekIndex]}, ${dayOfMonth} ${monthsOfYearShortened[monthIndex]}`
-	// const formattedDateShortened = `${dayOfMonth} ${monthsOfYearShortened[monthIndex]} ${daysOfWeekShortened[dayOfWeekIndex]}`;
+	const formattedDateTheShortest = `${daysOfWeekShortened[dayOfWeekIndex]}, ${dayOfMonth} ${monthsOfYearShortened[monthIndex]}`;
 
 	switch (type) {
 		case 'day':
@@ -61,6 +61,8 @@ export const formatDate = async (unixTimestamp, type) => {
 			return `${hours}:${minutes}`
 		case 'short':
 			return formattedDateShortened
+		case 'shortest':
+			return formattedDateTheShortest
 		case 'currentTime':
 			return `${currentHours}:${currentMinutes}`
 		default:

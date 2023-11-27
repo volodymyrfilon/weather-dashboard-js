@@ -1,0 +1,27 @@
+@media screen and (max-width: 1440px) {
+	.container {
+		width: 1200px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 980px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.container {
+		width: 768px
+	}
+}
+@media screen and (max-width: 768px) {
+	.container {
+		padding: 0 8px;
+		width: 576px
+	}
+}
+@media screen and (max-width: 576px) {
+	.container {
+		width: 320px
+	}
+}
+

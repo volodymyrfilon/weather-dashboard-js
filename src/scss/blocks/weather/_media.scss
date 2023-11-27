@@ -1,0 +1,304 @@
+@media screen and (max-width: 1440px) {
+	.weather__city {
+		width: 350px;
+	}
+	.weather__current {
+		width: 790px;
+	}
+	.weather__days {
+		width: 406px;
+	}
+	.weather__hours {
+		width: 730px;
+		&-item {
+			width: 114px;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	.weather {
+		margin-top: 28px;
+	}
+	.weather__city {
+		padding: 40px 20px 0;
+		width: 274px;
+		height: 310px;
+		&-name {
+			font-size: 36px;
+		}
+		&-time {
+			margin-top: 32px;
+		}
+	}
+	.weather__current {
+		padding: 36px 14px;
+		width: 646px;
+		height: 310px;
+		&-temperature {
+			font-size: 68px;
+		}
+		&-feels {
+			&_text {
+				font-size: 18px;
+			}
+			&_temperature {
+				font-size: 28px;
+			}
+		}
+		&-suntime {
+			margin-top: 14px;
+		}
+		&-other {
+			width: 88px;
+			&_value {
+				font-size: 18px;
+			}
+		}
+	}
+	.weather__days {
+		margin-top: 22px;
+		width: 320px;
+		height: 354px;
+		padding: 16px 6px 12px;
+		font-size: 32px;
+		&-item {
+			margin-top: 10px;
+			font-size: 19px;
+		}
+		&-icon {
+			height: 44px;
+			width: 44px;
+		}
+		&-temperature {
+			min-width: 56px;
+			text-align: right;
+		}
+		&-date {
+			min-width: 192px;
+			font-size: 19px;
+		}
+	}
+	.weather__hours {
+		margin-top: 22px;
+		width: 600px;
+		height: 354px;
+		padding: 18px 6px;
+		&-item {
+			width: 90px;
+			height: 266px;
+			padding: .5rem;
+		}
+		&-time {
+			font-size: 20px;
+		}
+		&-icon_weather {
+			width: 52px;
+			height: 52px;
+		}
+		&-icon_wind {
+			width: 52px;
+			height: 52px;
+		}
+		&-wind {
+			font-size: 18px;
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	.weather__city {
+		padding: 40px 12px 0;
+		width: 190px;
+		height: 280px;
+		&-name {
+			font-size: 32px;
+		}
+		&-time {
+			margin-top: 34px;
+			font-size: 60px;
+		}
+	}
+	.weather__current {
+		padding: 32px 8px;
+		width: 520px;
+		height: 280px;
+		&-temperature {
+			font-size: 62px;
+		}
+		&-feels {
+			margin: 0 0 12px;
+			max-width: 210px;
+			&_temperature {
+				font-size: 24px;
+			}
+		}
+		&-second {
+			width: 196px;
+		}
+		&-icon {
+			margin-top: -12px;
+			padding: 0 12px;
+			width: 196px;
+			height: 184px;
+		}
+		&-weather {
+			font-size: 22px;
+			white-space: wrap;
+		}
+		&-other {
+			width: 74px;
+			&_icon {
+				& svg {
+					height: 42px;
+					width: 42px;
+				}
+			}
+			&_value {
+				font-size: 16px;
+			}
+		}
+	}
+	.weather__days {
+		width: 260px;
+		height: 324px;
+		padding: 16px 6px 12px;
+		font-size: 24px;
+		&-item {
+			margin-top: 7px;
+		}
+		&-icon {
+			height: 44px;
+			width: 44px;
+		}
+		&-date {
+			min-width: 128px;
+		}
+	}
+	.weather__hours {
+		width: 450px;
+		height: 324px;
+		padding: 12px 6px;
+		overflow: hidden;
+		&-title {
+			font-size: 24px;
+		}
+		&-item {
+			width: 82px;
+			height: 254px;
+			padding: .5rem;
+		}
+		&-time {
+			font-size: 19px;
+		}
+		&-icon_weather {
+			width: 50px;
+			height: 50px;
+		}
+		&-icon_wind {
+			width: 50px;
+			height: 50px;
+		}
+		&-wind {
+			font-size: 16px;
+			text-align: center;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		overflow: visible;
+	}
+	.weather {
+		margin-top: 20px;
+		#weatherCity{order: 1}
+		#weatherCurrent{order: 3}
+		#weatherDays{order: 2}
+		#weatherHours{order: 4}
+	}
+	.weather__city {
+		margin: 0;
+		padding: 56px 20px 0;
+		width: 230px;
+		height: 300px;
+		&-name {
+			font-size: 36px;
+		}
+		&-time {
+			margin-top: 32px;
+		}
+	}
+	.weather__days {
+		margin: 0;
+		width: 310px;
+		height: 300px;
+		&-item {
+			margin-top: 4px;
+		}
+	}
+	.weather__current {
+		margin-top: 18px;
+		width: 560px;
+	}
+	.weather__hours {
+		margin: 18px 0 2rem;
+		width: 560px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.weather {
+		#weatherCity{order: 1}
+		#weatherCurrent{order: 2}
+		#weatherDays{order: 3}
+		#weatherHours{order: 4}
+	}
+	.weather__city {
+		margin: 0 auto;
+		padding: 36px 20px 0;
+		height: 230px;
+		&-name {
+			font-size: 26px;
+		}
+		&-time {
+			margin-top: 28px;
+			font-size: 52px;
+		}
+	}
+	.weather__current {
+		padding: 20px 16px;
+		flex-direction: column;
+		margin-top: 18px;
+		width: 230px;
+		height: 730px;
+		&-first {
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		&-temperature {
+			font-size: 52px;
+		}
+		&-feels {
+			gap: 6px;
+		}
+		&-suntime {
+			margin: 6px 0 0;
+		}
+
+	}
+
+
+
+	.weather__days {
+		margin: 0 auto;
+		width: 310px;
+		height: 300px;
+		&-item {
+			margin-top: 4px;
+		}
+	}
+
+	.weather__hours {
+		margin: 18px 0 2rem;
+		width: 560px;
+	}
+}
+

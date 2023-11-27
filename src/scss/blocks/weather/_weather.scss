@@ -120,9 +120,8 @@
 	&-other {
 		display: flex;
 		flex-direction: column;
-		max-width: 110px;
+		width: 110px;
 		height: 132px;
-
 		&_value {
 			margin-top: 8px;
 			font-size: 20px;
@@ -136,26 +135,13 @@
 }
 
 .weather__days {
-	margin-top: 35px;
+	margin-top: 26px;
 	display: block;
 	width: 414px;
 	height: 366px;
 	border-radius: 30px;
 	background: var(--bgCard);
 	box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-.weather__hours {
-	margin-top: 35px;
-	display: block;
-	width: 870px;
-	height: 366px;
-	border-radius: 30px;
-	background: var(--bgCard);
-	box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.5);
-}
-
-.weather__days {
 	padding: 18px 12px 12px;
 	text-align: center;
 	font-size: 32px;
@@ -182,6 +168,13 @@
 }
 
 .weather__hours {
+	margin-top: 26px;
+	display: block;
+	width: 870px;
+	height: 366px;
+	border-radius: 30px;
+	background: var(--bgCard);
+	box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.5);
 	padding: 18px 8px;
 	font-weight: 700;
 
@@ -232,4 +225,4 @@
 	}
 }
 
-
+@import "./media.scss";

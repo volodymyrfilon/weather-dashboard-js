@@ -29,6 +29,7 @@ export const currentVisibility = currentWeatherSection.querySelector('#currVisib
 //* WEATHER DAILY AND HOURLY SECTION
 export const dailyWeatherSection = document.querySelector('.weather__days');
 export const hourlyWeatherSection = document.querySelector('.weather__hours');
+export const hourlyWeatherWrapper = hourlyWeatherSection.querySelector('.weather__hours-wrapper');
 
 export const weatherIcons = {
 	'01d': 'd-clear-sky', // Clear sky (day)

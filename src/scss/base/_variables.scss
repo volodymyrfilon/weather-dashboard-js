@@ -15,9 +15,24 @@ body {
 }
 
 .container {
+	padding: 0 12px;
 	width: 1345px;
 }
 
+body.dark {
+	.weather__current-suntime {
+		svg {
+			fill: #fff;
+		}
+		transition: .25s all;
+	}
+	.weather__current-third {
+		svg {
+			fill: #fff;
+		}
+		transition: .25s all;
+	}
+}
 
 $light-primary: #292929;
 $light-bgBody: linear-gradient(113deg, rgba(255, 255, 255, 1) -30%, rgba(70, 97, 115, 1) 150%);
