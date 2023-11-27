@@ -111,14 +111,14 @@
     </div>
 </header>
 		<main class="weather">
-			<div class="weather__city">
+			<div class="weather__city" id='weatherCity'>
     <div class="weather__city-wrapper dynamic-data">
         <div class="weather__city-name"></div>
         <div class="weather__city-time">00:00</div>
         <div class="weather__city-date"></div>
     </div>
 </div>
-			<div class="weather__current">
+			<div class="weather__current" id='weatherCurrent'>
 
     <div class="weather__current-first dynamic-data">
         <div class="weather__current-temperature">24°C</div>
@@ -275,7 +275,7 @@
                 </svg>
             </div>
             <div class='weather__current-other_value' id='currWind'>2 km/h</div>
-            <div class='weather__current-other_text'>Wind Speed</div>
+            <div class='weather__current-other_text'>Wind Sp.</div>
         </div>
         <div class='weather__current-other'>
             <div class='weather__current-other_icon'>
@@ -351,11 +351,11 @@
         </div>
     </div>
 </div>
-			<div class="weather__days">
+			<div class="weather__days" id='weatherDays'>
 	<div class='weather__days-title'>5 Days Forecast:</div>
 	<div class='weather__days-wrapper dynamic-data'></div>
 </div>
-			<div class="weather__hours">
+			<div class="weather__hours" id='weatherHours'>
 	<div class="weather__hours-title">Hourly Forecast:</div>
 	<div class="weather__hours-wrapper dynamic-data">
 	</div>
