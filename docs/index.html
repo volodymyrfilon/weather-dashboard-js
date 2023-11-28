@@ -31,21 +31,22 @@
 	<meta property="og:description" content="Experience accurate and up-to-date weather information with Weather App | Find your city. Check current conditions, forecasts, and more, all in one place. Plan your day with confidence.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://volodymyrfilon.github.io/weather-dashboard-js/">
-	<meta property="og:image" content="../icons/meta/meta.jpg">
-	<meta property="og:image:alt" content="Weather App | Find your city">
+	<meta property="og:image" content="/icons/meta/meta.jpg">
+	<meta property="og:image:alt" content="/icons/meta/meta.jpg">
+	<meta property="og:image:secure_url" content="/icons/meta/meta.jpg">
 
 	<!-- Twitter Meta Tags (for Twitter sharing) -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Weather App | Find your city">
 	<meta name="twitter:description" content="Experience accurate and up-to-date weather information with Weather App | Find your city. Check current conditions, forecasts, and more, all in one place. Plan your day with confidence.">
-	<meta name="twitter:image" content="../icons/meta/meta.jpg">
+	<meta name="twitter:image" content="/icons/meta/meta.jpg">
 	<meta name="twitter:creator" content="https://github.com/volodymyrfilon/weather-dashboard-js">
 
 	<!-- CSS Stylesheets, if any -->
 	<link rel="stylesheet" href="./css/main.css" />
 
 	<!-- Other Meta Tags -->
-	<meta name="keywords" content="weather, forecast, temperature, weather in your city, meteorology">
+	<meta name="keywords" content="weather, forecast, temperature, location, meteorology">
 	<meta name="author" content="https://github.com/volodymyrfilon/weather-dashboard-js">
 	<meta name="robots" content="index, follow">
 	<meta name="theme-color" content="">
@@ -121,7 +122,7 @@
 </div>
 			<div class="weather__current" id='weatherCurrent'>
 
-    <div class="weather__current-first dynamic-data">
+    <div class="weather__current-first dynamic-data" id='first'>
         <div class="weather__current-temperature">24°C</div>
         <div class="weather__current-feels">
             <div class="weather__current-feels_text">Feels like:</div>
@@ -213,12 +214,12 @@
         </div>
     </div>
 
-    <div class="weather__current-second dynamic-data">
+    <div class="weather__current-second dynamic-data" id='second'>
         <img src='' alt='' class='weather__current-icon'></img>
         <div class='weather__current-weather'>Sunny</div>
     </div>
 
-    <div class="weather__current-third dynamic-data">
+    <div class="weather__current-third dynamic-data" id='third'>
         <div class='weather__current-other'>
             <div class='weather__current-other_icon'>
                 <svg fill="#292929" height="60px" width="60px" version="1.1" id="Capa_1"
