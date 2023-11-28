@@ -2,7 +2,6 @@
 * {
 	margin: 0 auto;
 	font-family: Poppins, sans-serif;
-	transition: all 0.2s;
 }
 
 body {
@@ -24,13 +23,11 @@ body.dark {
 		svg {
 			fill: #fff;
 		}
-		transition: .25s all;
 	}
 	.weather__current-third {
 		svg {
 			fill: #fff;
 		}
-		transition: .25s all;
 	}
 }
 

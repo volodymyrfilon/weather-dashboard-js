@@ -1,5 +1,5 @@
 import { formatDate, mpsToKmh, roundDegree, } from '../services/convertUnitsService'
-import { dailyWeatherSection, hourlyWeatherSection, hourlyWeatherWrapper, weatherIcons } from './constants'
+import { dailyWeatherSection, hourlyWeatherSection, weatherIcons } from './constants'
 
 export const fetchForecastWeatherData = async (data, key) => {
   const dailyIcon = dailyWeatherSection.querySelectorAll('.weather__days-icon');
@@ -49,7 +49,7 @@ export const fetchForecastWeatherData = async (data, key) => {
     const windowWidth = window.innerWidth;
     switch (type) {
       case 'dailyDate':
-        if (windowWidth >= 577 && windowWidth <= 992) {
+        if (windowWidth >= 320 && windowWidth <= 992) {
           return await formatDate(item, 'shortest');
         } else {
           return await formatDate(item, 'short');
